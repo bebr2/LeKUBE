@@ -1,0 +1,10 @@
+cn2an==0.5.22
+faiss==1.5.3
+jieba==0.42.1
+numpy==2.0.0
+pandas==2.2.2
+peft==0.11.1
+rank_bm25==0.2.2
+torch==2.3.1
+tqdm==4.66.2
+transformers==4.42.3

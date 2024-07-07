@@ -33,6 +33,14 @@ Using `Baichuan2Chat13B` as an example, we introduce how each knowledge update m
 
 ### Preparation
 
+#### Install Environment
+
+```
+conda create -n MIND python=3.9
+conda activate LeKUBE
+pip install -r ./requirements.txt
+```
+
 #### Lawformer Index Generation
 
 Run
