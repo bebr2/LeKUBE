@@ -1,0 +1,44 @@
+
+
+alg_name: "KN"
+model_name: "/liuzyai04/thuir/wcy/bisheend/train/ft_law_model/baichuanchat/checkpoint-108"
+device: 0
+
+model_parallel: true
+
+
+lr_scale: 1.0
+n_toks: 10
+refine: false
+batch_size: 1
+steps: 1
+adaptive_threshold: 0.2
+p: 0.4
+
+#alg_name: "ROME"
+#model_name: "./hugging_cache/llama-7b"
+#device: 0
+#layers: [5]
+#fact_token: "subject_last"
+#v_num_grad_steps: 20
+#v_lr: 1e-1
+#v_loss_layer: 31
+#v_weight_decay: 1e-3
+#clamp_norm_factor: 4
+#kl_factor: 0.0625
+#mom2_adjustment: false
+#context_template_length_params: [[5, 10], [10, 10]]
+#rewrite_module_tmp: "model.layers.{}.mlp.down_proj"
+#layer_module_tmp: "model.layers.{}"
+#mlp_module_tmp: "model.layers.{}.mlp"
+#attn_module_tmp: "model.layers.{}.self_attn"
+#ln_f_module: "model.norm"
+#lm_head_module: "lm_head"
+#mom2_dataset: "wikipedia"
+#mom2_n_samples: 100000
+#mom2_dtype: "float32"
+
+
+
+
+

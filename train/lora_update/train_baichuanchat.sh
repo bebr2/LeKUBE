@@ -1,0 +1,24 @@
+NUM=2
+deepspeed --master_port=11469 --num_gpus=${NUM} ./baichuanchat.py  \
+    --report_to "tensorboard" \
+    --data_path "../../data/LawAdd.json" \
+    --model_name_or_path "/path/to/baichuan_ckpt" \
+    --output_dir "./baichuanchat" \
+    --model_max_length 1024 \
+    --num_train_epochs 6 \
+    --per_device_train_batch_size 2 \
+    --gradient_accumulation_steps 4 \
+    --save_strategy no \
+    --learning_rate 1e-5 \
+    --lr_scheduler_type cosine \
+    --adam_beta1 0.9 \
+    --adam_beta2 0.98 \
+    --adam_epsilon 1e-8 \
+    --max_grad_norm 1.0 \
+    --weight_decay 1e-5 \
+    --warmup_ratio 0.0 \
+    --logging_steps 1 \
+    --gradient_checkpointing True \
+    --deepspeed ../ds_config.json \
+    --bf16 True \
+    --use_lora True \
